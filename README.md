@@ -89,17 +89,17 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
 - Get basic HTML & CSS down
 - Create a text input and button for searching the Superhero API by hero or villain name
 - Style using Flexbox
-- Implement responsive design using a media query for desktops
+- Implement responsive design using a media query for desktops and mobile devices
 - JavaScript Functionality:
   - Attach an event listener that logs the text value of the input
   - Make search return information about heroes and villains' powerstats, 
     biography, appearance, work, connections, and their picture
   - Create button that allow user to choose favorite heroes or villains and build a team 
-  - Create function to randomly choose heroes and villains 
-  - Create a button and function to compare powerstats of heroes and villains
+  
 
 #### PostMVP  
-
+- Create function to randomly choose heroes and villains 
+- Create a button and function to compare powerstats of heroes and villains
 - Use local storage to save user's team
 - Add animations of heroes and villains
 - Add an alert box to let users known when they've added or removed a hero or villain from their team
@@ -130,7 +130,7 @@ Priority Matrix Image Link: https://i.imgur.com/VyhW3Ew.jpg
 | Create a text input and button & attach an event listener| H | 3hrs| --- | --- |
 | Make search return information about heroes and villains| H | 3hrs| --- | --- |
 | Create button that allow user to choose favorite heroes or villains | H | 3hrs| --- | --- |
-| JavaScript random & compare functions| H | 3hrs| --- | --- |
+| JavaScript random & compare functions| M | 3hrs| --- | --- |
 | Complete MVP| H | 3hrs| --- | --- |
 | Responsive Design| H | 3hrs| --- | --- |
 | Alert box | L | 3hrs| --- | --- |

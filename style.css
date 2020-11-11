@@ -2,11 +2,12 @@ body {
   text-align: center;
   background: url('https://i.imgur.com/4lbhbKO.jpg');
   background-size: cover;
-}
+} 
 h1 {
   font-size: 60px;
   color: white;
 }
+
 
 input {
   padding: 8px;
@@ -26,19 +27,31 @@ button {
 }
 .container {
   padding: 70px;
+  padding-bottom: 80px;
   background: black;
   border-radius: 1%;
   border: 1px solid  #FFFF00;
   margin: 200px;
   text-align: center;
   color: white;
-
+}
+.container h1 {
+  font-weight: 800;
 }
 .search-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+ 
   
 }
+.hero-id {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 200px;
+}
 
+@media screen and (max-width: 600px) {
+
+}

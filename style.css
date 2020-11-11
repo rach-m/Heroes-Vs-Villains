@@ -1,11 +1,37 @@
 body {
   text-align: center;
-  background: url('https://i.imgur.com/4lbhbKO.jpg');
+  background-image: url('https://i.imgur.com/4lbhbKO.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
 } 
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  border: 1px solid  #FFFF00;
+  margin-bottom: 60px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
 h1 {
   font-size: 60px;
   color: white;
+  text-align: center;
+ 
+
 }
 
 h3 {
@@ -37,9 +63,11 @@ button {
   margin-left: 200px;
   margin-right: 200px;
   text-align: center;
+  align-items: center;
   color: white;
+ 
 }
-.container h1 {
+.container h2 {
   font-weight: 800;
 }
 .search-section {
@@ -57,6 +85,30 @@ button {
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+.topnav a {
+  float: none;
+  width: 100%;
+  
+}
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
 
+body {
+  text-align: center;
+  background-image: url('https://i.imgur.com/4lbhbKO.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+body .container {
+  align-content: center;
+}
+.container {
+  width: fit-content;
+  align-self: center;
+}
 }

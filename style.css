@@ -8,7 +8,9 @@ h1 {
   color: white;
 }
 
-
+h3 {
+  color: white
+}
 input {
   padding: 8px;
   border-radius: 2px;
@@ -52,6 +54,7 @@ button {
   flex-flow: row wrap;
   justify-content: center;
   flex-basis: 200px;
+  color: white;
 }
 
 @media screen and (max-width: 600px) {

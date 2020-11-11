@@ -10,7 +10,7 @@ async function getHeroId(id) {
   try {
     const response = await axios.get(url)
     const search = response.data.results
-    console.log(search)
+
 
     search.forEach((item) => {
       const heroId = document.querySelector('.hero-id')
@@ -20,14 +20,14 @@ async function getHeroId(id) {
 
 
       const info = document.createElement('p')
-      const name = item.name
-      const image = item.image
-      const powerstats = item.powerstats
-      const appearance = item.appearance
-      const biography = item.biography['full-name']
-      const work = item.work['occupation']
-      const connections = item.connections
-      info.textContent = `${name} ${powerstats} ${appearance} ${biography} ${work} ${connections}`
+      
+      const appearance = item.appearance['gender', 'race', 'height', 'weight', 'eye-color']
+      const biography = item.biography['full-name', 'aliases', 'place-of-birth']
+      const image = item.image[0]
+      const powerstats = item.powerstats['intelligence', 'strength', 'speed', 'durability', 'power']
+      const work = item.work['occupation', 'base']
+      const connections = item.connections['group-affiliation']
+      info.textContent = `${biography} ${powerstats} ${appearance} ${work} ${connections} ${image}`
       idDiv.append(info)
       
       const img = document.createElement('img')

@@ -7,29 +7,6 @@ body {
   background-size: cover;
 } 
 
-/* Style the top navigation bar */
-/* .topnav {
-  overflow: hidden;
-  background-color: black;
-  border: 1px solid  #FFFF00;
-  margin-bottom: 60px;
-  align-self: stretch;
-} */
-/* 
-/* Style the topnav links */
-/* .topnav a {
-  float: right;
-  display: inline;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
- 
-}
-
-li {
-  display: inline;
-}  */
 
 h1 {
   font-size: 60px;
@@ -95,13 +72,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-/* .topnav a {
-  float: none;
-  width: 100%;
-}
-li {
-  display: inline; */
-}
 h1 {
   font-size: 36px;
   text-align: center;
@@ -110,12 +80,4 @@ h1 {
 .search-input input {
   width: 100%
  }
-
-/* body .container{
-  align-content: center;
-} */
-
- /* .container {
- width: fit-content;
-
-} */
+}

@@ -3,6 +3,7 @@ const API_KEY = '1743621192472664'
 const BASE_URL = `https://superheroapi.com/api/1743621192472664`
 
 
+
 const cors = 'https://cors-anywhere.herokuapp.com/'
 
 async function getHeroId(id) {
@@ -28,7 +29,7 @@ async function getHeroId(id) {
       const powerstats = item.powerstats['intelligence'] + item.powerstats['strength'] + item.powerstats['speed'] + item.powerstats['durability'] + item.powerstats['power']
       const work = item.work['occupation'] + item.work['base']
       const connections = item.connections['group-affiliation']
-      info.textContent = `${biography} ${powerstats} ${appearance} ${work} ${connections} ${image}`
+      info.innerHTML = `${biography} ${powerstats} ${appearance} ${work} ${connections} ${image}`
       idDiv.append(info)
       
       const img = document.createElement('img')
@@ -42,13 +43,13 @@ async function getHeroId(id) {
 }
 const button = document.querySelector('#search')
 button.addEventListener('click', () => {
-  let input = document.querySelector('#blank').value
+  let input = document.querySelector('#input-name').value
   getHeroId(input)
 })
 
 function removeId() {
   const removeId = document.querySelector('.hero-id')
-  while (removeMovie.lastChild) {
+  while (removeId.lastChild) {
     removeId.removeChild(removeId.lastChild)
   }
 }

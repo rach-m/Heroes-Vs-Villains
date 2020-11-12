@@ -8,23 +8,28 @@ body {
 } 
 
 /* Style the top navigation bar */
-.topnav {
+/* .topnav {
   overflow: hidden;
   background-color: black;
   border: 1px solid  #FFFF00;
   margin-bottom: 60px;
-}
-
+  align-self: stretch;
+} */
+/* 
 /* Style the topnav links */
-.topnav a {
+/* .topnav a {
   float: right;
-  display: block;
+  display: inline;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
+ 
 }
+
+li {
+  display: inline;
+}  */
 
 h1 {
   font-size: 60px;
@@ -59,11 +64,8 @@ button {
   background: black;
   border-radius: 1%;
   border: 1px solid  #FFFF00;
-  margin-top: 200px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-top: 15%;
   text-align: center;
-  align-items: center;
   color: white;
  
 }
@@ -86,10 +88,12 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-.topnav a {
+/* .topnav a {
   float: none;
   width: 100%;
-  
+}
+li {
+  display: inline; */
 }
 h1 {
   font-size: 36px;
@@ -98,17 +102,9 @@ h1 {
 
 body {
   text-align: center;
-  background-image: url('https://i.imgur.com/4lbhbKO.jpg');
   background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
 } 
 body .container {
   align-content: center;
-}
-.container {
-  width: fit-content;
-  align-self: center;
 }
 }

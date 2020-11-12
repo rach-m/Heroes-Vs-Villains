@@ -22,11 +22,11 @@ async function getHeroId(id) {
 
       const info = document.createElement('p')
       
-      const appearance = item.appearance['gender', 'race', 'height', 'weight', 'eye-color']
-      const biography = item.biography['full-name', 'aliases', 'place-of-birth']
+      const appearance = item.appearance['gender'] + item.appearance['race'] + item.appearance['height'] + item.appearance['weight'] + item.appearance['eye-color']
+      const biography = item.biography['full-name'] + item.biography['aliases'] + item.biography['place-of-birth']
       const image = item.image
-      const powerstats = item.powerstats['intelligence', 'strength', 'speed', 'durability', 'power']
-      const work = item.work['occupation', 'base']
+      const powerstats = item.powerstats['intelligence'] + item.powerstats['strength'] + item.powerstats['speed'] + item.powerstats['durability'] + item.powerstats['power']
+      const work = item.work['occupation'] + item.work['base']
       const connections = item.connections['group-affiliation']
       info.textContent = `${biography} ${powerstats} ${appearance} ${work} ${connections} ${image}`
       idDiv.append(info)

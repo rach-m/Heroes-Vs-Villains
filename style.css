@@ -35,8 +35,11 @@ h1 {
   font-size: 60px;
   color: white;
   text-align: center;
- 
+  margin-top: 40px;
+}
 
+h2 {
+  margin-bottom: 40px;
 }
 
 h3 {
@@ -59,26 +62,30 @@ button {
   margin:5px;
 }
 .container {
-  padding: 70px;
-  padding-bottom: 80px;
   background: black;
+  padding: 50px;
+  padding-bottom: 60px;
   border-radius: 1%;
   border: 1px solid  #FFFF00;
   margin-top: 15%;
   text-align: center;
   color: white;
+  transition: margin-bottom 2s;
  
 }
 .container h2 {
   font-weight: 800;
 }
-.search-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  
+.search-input {
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
+
+.search-input input {
+ width: 50%
+}
+
 .hero-id {
   display: flex;
   flex-flow: row wrap;
@@ -87,7 +94,7 @@ button {
   color: white;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 /* .topnav a {
   float: none;
   width: 100%;
@@ -100,11 +107,15 @@ h1 {
   text-align: center;
 }
 
-body {
-  text-align: center;
-  background-position: center;
-} 
-body .container {
+.search-input input {
+  width: 100%
+ }
+
+/* body .container{
   align-content: center;
-}
-}
+} */
+
+ /* .container {
+ width: fit-content;
+
+} */

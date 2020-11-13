@@ -15,17 +15,20 @@ async function getHeroId(id) {
     console.log(search)
 
     search.forEach((item) => {
+
+
       const heroCard = document.querySelector('.hero-id')
+
       const img = document.createElement('img')
       img.setAttribute('src', item.image.url)
+      img.setAttribute('value', item.id)
       heroCard.append(img)
-
-      const info = document.createElement('p')
-      // const appearance = item.appearance['gender'] + item.appearance['race'] + item.appearance['height'] + item.appearance['weight'] + item.appearance['eye-color']
+      
+      // Appearance Info List
       const appearance = item.appearance
       const appearanceSection = document.createElement('section')
       const appearanceH2 = document.createElement('h2')
-      appearanceH2.innerText = "appearance"
+      appearanceH2.innerText = "Appearance"
       console.log(appearance)
       const appearanceUl = document.createElement('ul')
       for (let key in appearance) {
@@ -37,20 +40,71 @@ async function getHeroId(id) {
       appearanceSection.append(appearanceUl)
       heroCard.append(appearanceSection)
 
-      // const biography = item.biography['full-name'] + item.biography['aliases'] + item.biography['place-of-birth']
-      // con
+      // Biography Info List
+      const biography = item.biography
+      const biographySection = document.createElement('section')
+      const biographyH2 = document.createElement('h2')
+      biographyH2.innerText = "Biography"
+      console.log(biography)
+      const biographyUl = document.createElement('ul')
+      for (let key in biography) {
+        const item = document.createElement('li')
+        item.innerText = `${key}: ${biography[key]}`
+        biographyUl.append(item)
+      }
+      biographySection.append(biographyH2)
+      biographySection.append(biographyUl)
+      heroCard.append(biographySection)
 
-      // const image = item.image
 
-      // const powerstats = item.powerstats['intelligence'] + item.powerstats['strength'] + item.powerstats['speed'] + item.powerstats['durability'] + item.powerstats['power']
+      // Powerstats Info List
+      const powerstats = item.powerstats
+      const powerstatsSection = document.createElement('section')
+      const powerstatsH2 = document.createElement('h2')
+      powerstatsH2.innerText = "Powerstats"
+      console.log(powerstats)
+      const powerstatsUl = document.createElement('ul')
+      for (let key in powerstats) {
+        const item = document.createElement('li')
+        item.innerText = `${key}: ${powerstats[key]}`
+        powerstatsUl.append(item)
+      }
+      powerstatsSection.append(powerstatsH2)
+      powerstatsSection.append(powerstatsUl)
+      heroCard.append(powerstatsSection)
 
-      // const work = item.work['occupation'] + item.work['base']
+      // Work Info List
+      const work = item.work
+      const workSection = document.createElement('section')
+      const workH2 = document.createElement('h2')
+      workH2.innerText = "Work"
+      console.log(work)
+      const workUl = document.createElement('ul')
+      for (let key in work) {
+        const item = document.createElement('li')
+        item.innerText = `${key}: ${work[key]}`
+        workUl.append(item)
+      }
+      workSection.append(workH2)
+      workSection.append(workUl)
+      heroCard.append(workSection)
 
-      // const connections = item.connections['group-affiliation']
 
-      // info.innerHTML = `${biography} ${powerstats} ${appearance} ${work} ${connections} ${image}`
-      // heroCard.append(info)
-      
+      // Connections Info List
+      const connections = item.connections
+      const connectionsSection = document.createElement('section')
+      const connectionsH2 = document.createElement('h2')
+      connectionsH2.innerText = "Connections"
+      console.log(connections)
+      const connectionsUl = document.createElement('ul')
+      for (let key in connections) {
+        const item = document.createElement('li')
+        item.innerText = `${key}: ${connections[key]}`
+        connectionsUl.append(item)
+      }
+      connectionsSection.append(connectionsH2)
+      connectionsSection.append(connectionsUl)
+      heroCard.append(connectionsSection)
 
     });
   } catch (error) {
@@ -69,5 +123,3 @@ function removeId() {
     removeId.removeChild(removeId.lastChild)
   }
 }
-
-

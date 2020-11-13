@@ -7,6 +7,42 @@ body {
   background-size: cover;
 } 
 
+/* .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#container2 {
+  padding: 2px 16px;
+} */
+
+.grid-container {
+  background-color: black;
+  border-radius: 10%;
+  border: 10px solid  #FFFF00;
+
+}
+
+.hero-id {
+  display: grid;
+  grid-template-columns: .3fr 1.7fr;
+  grid-template-rows: repeat(auto-fit, minmax(3, .25fr));
+  gap: 5px 5px;
+  grid-template-areas: 
+  ". ." 
+  ". ."
+  ". ."
+  ". .";
+}
+
+img {
+height: 100px;
+width: auto;
+border-radius: 5%;
+}
 
 h1 {
   font-size: 60px;

@@ -80,6 +80,12 @@ async function getHeroId(id) {
   try {
     const response = await axios.get(url, headers)
     // const response = fakeResponse
+    // see local
+    // const response = {
+    //   data: {
+    //     results: JSON.parse(localStorage.addTeam)
+    //   }
+    // }
     const search = response.data.results
     console.log(search)
 
@@ -228,10 +234,31 @@ async function getHeroId(id) {
         item.innerText = `${connections[key]}`
         connectionsUl2.append(item)
       }
+      
+      function addTeam() {
+        console.log(localStorage)
+        if (localStorage.addTeam) {
+          let teamArr = JSON.parse(localStorage.addTeam)
+          console.log(teamArr)
+          teamArr.push(item)
+          localStorage.addTeam = JSON.stringify(teamArr)
+        } else {
+          localStorage.addTeam = JSON.stringify([item])
+        }
+      }
+      const addTeambtn = document.createElement('button')
+      addTeambtn.addEventListener('click', addTeam)
+      const addTeambtnp = document.createElement('p')
+      addTeambtn.innerText = "Add to Team"
+      
+
+
       connectionsDiv.append(connectionsH3)
       connectionsDiv.append(connectionsUl)
       connectionsDiv.append(connectionsUl2)
       connectionsDiv.className = ('c-connections')
+      connectionsDiv.append(addTeambtn)
+      connectionsDiv.append(addTeambtnp)
       heroCard.append(connectionsDiv)
 
     });

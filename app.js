@@ -93,6 +93,7 @@ async function getHeroId(id) {
       img.setAttribute('value', item.id)
       img.className = ('c-img')
       const cImgDiv = document.createElement('div')
+      
       const nameH3 = document.createElement('h3')
       nameH3.className = ('heroName')
       nameH3.id = ('heroName-id')
@@ -101,7 +102,7 @@ async function getHeroId(id) {
       const nameUl2 = document.createElement('ul')
       for (let key in name) {
         const item = document.createElement('li')
-        item.innerText = `${appearance[key]}`
+        item.innerText = `${name[key]}`
         nameUl2.append(item)
       }
       cImgDiv.className = ('c-imgDiv')
@@ -123,7 +124,7 @@ async function getHeroId(id) {
         item.innerText = `${key}:`
         appearanceUl.append(item)
       }
-      const appearanceUl2 = document.createElement('ul')
+      const appearanceUl2 = document.createElement('ol')
       for (let key in appearance) {
         const item = document.createElement('li')
         item.innerText = `${appearance[key]}`
@@ -148,7 +149,7 @@ async function getHeroId(id) {
         item.innerText = `${key}:`
         biographyUl.append(item)
       }
-      const biographyUl2 = document.createElement('ul')
+      const biographyUl2 = document.createElement('ol')
       for (let key in biography) {
         const item = document.createElement('li')
         item.innerText = `${biography[key]}`
@@ -174,7 +175,7 @@ async function getHeroId(id) {
         item.innerText = `${key}:`
         powerstatsUl.append(item)
       }
-      const powerstatsUl2 = document.createElement('ul')
+      const powerstatsUl2 = document.createElement('ol')
       for (let key in powerstats) {
         const item = document.createElement('li')
         item.innerText = `${powerstats[key]}`
@@ -199,7 +200,7 @@ async function getHeroId(id) {
         item.innerText = `${key}:`
         workUl.append(item)
       }
-      const workUl2 = document.createElement('ul')
+      const workUl2 = document.createElement('ol')
       for (let key in work) {
         const item = document.createElement('li')
         item.innerText = `${work[key]}`
@@ -225,7 +226,7 @@ async function getHeroId(id) {
         item.innerText = `${key}:`
         connectionsUl.append(item)
       }
-      const connectionsUl2 = document.createElement('ul')
+      const connectionsUl2 = document.createElement('ol')
       for (let key in connections) {
         const item = document.createElement('li')
         item.innerText = `${connections[key]}`

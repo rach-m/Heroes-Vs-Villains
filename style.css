@@ -10,15 +10,19 @@ body {
   
 } 
 
-/* .nav-bar {
+.nav-bar {
   display: inline-grid;
-} */
+}
 
 ul {
   list-style-type: none;
   padding: 0px;
 }
 
+ol {
+  list-style-type: none;
+  padding: 0px;
+}
 
 .hero-id {
   display: grid;
@@ -106,6 +110,11 @@ ul {
 
 .c-appearance ul {
   padding-top: 40px;
+  text-align: left;
+}
+.c-appearance ol {
+  padding-top: 40px;
+  text-align: right;
 }
 
 .c-biography{
@@ -139,6 +148,11 @@ ul {
  padding-top: 40px;
 }
 
+.c-biography ol {
+  padding-top: 40px;
+  text-align: right;
+}
+
 .c-powerstats {
   grid-row-start: 4;
   display: flex;
@@ -170,6 +184,11 @@ ul {
  padding-top: 40px;
 }
 
+.c-powerstats ol {
+ padding-top: 40px;
+ text-align: right;
+}
+
 .c-work {
   grid-row-start: 5;
   display: flex;
@@ -199,6 +218,11 @@ ul {
 
 .c-work ul {
  padding-top: 40px;
+}
+
+.c-work ol {
+ padding-top: 40px;
+ text-align: right;
 }
 
 .c-connections {
@@ -233,6 +257,11 @@ ul {
 
 .c-connections ul {
  padding-top: 40px;
+}
+
+.c-connections ol {
+  padding-top: 40px;
+  text-align: right;
 }
 
 h1 {

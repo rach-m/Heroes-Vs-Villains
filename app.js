@@ -1,6 +1,6 @@
-const DOMAIN = 'https://superheroapi.com/'
-const API_KEY = '1743621192472664'
-const BASE_URL = `https://superheroapi.com/api/1743621192472664`
+// const DOMAIN = 'https://superheroapi.com/'
+// const API_KEY = '1743621192472664'
+// const BASE_URL = `https://superheroapi.com/api/1743621192472664`
 
 const fakeResponse = {data:
 {
@@ -65,10 +65,12 @@ const fakeResponse = {data:
 }
 
 
-// const cors = 'https://cors-anywhere.herokuapp.com/'
+const cors = 'https://cors-anywhere.herokuapp.com/'
 
 async function getHeroId(id) {
-  const url =  `https://www.superheroapi.com/api/1743621192472664/search/${id}`
+  // removeId()
+
+  // const url = (cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
   const headers = {
     headers: {
       'Access-Control-Allow-Origin': '*'
@@ -93,21 +95,15 @@ async function getHeroId(id) {
       img.setAttribute('value', item.id)
       img.className = ('c-img')
       const cImgDiv = document.createElement('div')
-      
-      const nameH3 = document.createElement('h3')
-      nameH3.className = ('heroName')
-      nameH3.id = ('heroName-id')
-      name.innerText = "Name"
-      console.log(name)
-      const nameUl2 = document.createElement('ul')
-      for (let key in name) {
-        const item = document.createElement('li')
-        item.innerText = `${name[key]}`
-        nameUl2.append(item)
-      }
       cImgDiv.className = ('c-imgDiv')
+
+      const heroName = document.createElement('h2')
+      const hvName = item.name
+      heroName.textContent = `${hvName}`
+      heroName.className = ('c-hvName')
+
+      cImgDiv.append(heroName)
       cImgDiv.append(img)
-      cImgDiv.append(nameH3)
       heroCard.append(cImgDiv)
       
       
@@ -245,7 +241,7 @@ async function getHeroId(id) {
 }
 const button = document.querySelector('#search')
 button.addEventListener('click', () => {
-  let input = document.querySelector('#input-name').value
+  let input = document.querySelector('#input-name').value   
   getHeroId(input)
 })
 
@@ -255,3 +251,4 @@ function removeId() {
     removeId.removeChild(removeId.lastChild)
   }
 }
+

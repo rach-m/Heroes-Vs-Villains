@@ -70,15 +70,15 @@ const cors = 'https://cors-anywhere.herokuapp.com/'
 async function getHeroId(id) {
   // removeId()
 
-  const url = (cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
-  // const headers = {
-  //   headers: {
-  //     'Access-Control-Allow-Origin': '*'
-  //   }
-  // }
+  const url = ( cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
+  const headers = {
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    }
+  }
 
   try {
-    const response = await axios.get(url)
+    const response = await axios.get(url, headers)
     // const response = fakeResponse
     const search = response.data.results
     console.log(search)

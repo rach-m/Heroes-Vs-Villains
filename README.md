@@ -109,10 +109,10 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | complete
-|Nov 10| Project Approval & HTML & CSS Basic Structure| Incomplete
+|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Nov 10| Project Approval & HTML & CSS Basic Structure| Complete
 |Nov 12| JavaScript Functionality | Incomplete
-|Nov 13| MVP | Incomplete
+|Nov 13| MVP | Complete
 |Nov 16| PostMVP | Incomplete
 |Nov 17| Presentations | Incomplete
 

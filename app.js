@@ -247,18 +247,25 @@ async function getHeroId(id) {
         }
       }
       const addTeambtn = document.createElement('button')
+      addTeambtn.id = ('team-btn')
+      addTeambtn.className = 'addteam-Btn'
       addTeambtn.addEventListener('click', addTeam)
-      const addTeambtnp = document.createElement('p')
       addTeambtn.innerText = "Add to Team"
       
+      // window.localStorage.addTeam
 
+      // localStorage.addTeam([item],'team.html') 
+      // window.location = localStorage.addTeam
+
+      // document.getElementById('team-btn').addEventListener('click', function () {
+      //   window.location.assign('team.html')
+      // })
 
       connectionsDiv.append(connectionsH3)
       connectionsDiv.append(connectionsUl)
       connectionsDiv.append(connectionsUl2)
       connectionsDiv.className = ('c-connections')
       connectionsDiv.append(addTeambtn)
-      connectionsDiv.append(addTeambtnp)
       heroCard.append(connectionsDiv)
 
     });

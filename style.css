@@ -10,12 +10,12 @@ body {
   
 } 
 
-.wrapper {
+/* .wrapper {
   /* display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr auto;
-  font: 1em Helvetica, Arial, sans-serif; */
-}
+  /* font: 1em Helvetica, Arial, sans-serif; */
+
 .wrapper nav {
   writing-mode: horizontal-tb;
   overflow: hidden;
@@ -351,6 +351,21 @@ box-shadow:0 0 10px #FFFF00;
   margin-top: 20%;
   text-align: center;
   color: white;
+}
+
+.addteam-Btn {
+  height: 33px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: #FFFF00;
+  border-radius: 1%;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+
+h6 {
+  color:white;
+
 }
 
 @media screen and (max-width: 600px) {

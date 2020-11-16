@@ -68,6 +68,9 @@ ol {
   color: white;
 }
 
+.hidden {
+ display: none;
+}
 
 .c-imgDiv{
   display: grid;

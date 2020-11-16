@@ -2,73 +2,74 @@
 // const API_KEY = '1743621192472664'
 // const BASE_URL = `https://superheroapi.com/api/1743621192472664`
 
-const fakeResponse = {data:
-{
-  "response": "success",
-  "results-for": "ironman",
-  "results": [
-    {
-      "id": "732",
-      "name": "Ironman",
-      "powerstats": {
-        "intelligence": "100",
-        "strength": "85",
-        "speed": "58",
-        "durability": "85",
-        "power": "100",
-        "combat": "64"
-      },
-      "biography": {
-        "full-name": "Tony Stark",
-        "alter-egos": "No alter egos found.",
-        "aliases": [
-          "Iron Knight",
-          "Hogan Potts",
-          "Spare Parts Man",
-          "Cobalt Man II",
-          "Crimson Dynamo",
-          "Ironman"
-        ],
-        "place-of-birth": "Long Island, New York",
-        "first-appearance": "Tales of Suspence #39 (March, 1963)",
-        "publisher": "Marvel Comics",
-        "alignment": "good"
-      },
-      "appearance": {
-        "gender": "Male",
-        "race": "Human",
-        "height": [
-          "6'6",
-          "198 cm"
-        ],
-        "weight": [
-          "425 lb",
-          "191 kg"
-        ],
-        "eye-color": "Blue",
-        "hair-color": "Black"
-      },
-      "work": {
-        "occupation": "Inventor, Industrialist; former United States Secretary of Defense",
-        "base": "Seattle, Washington"
-      },
-      "connections": {
-        "group-affiliation": "Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.",
-        "relatives": "Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor)"
-      },
-      "image": {
-        "url": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
-      }
-    }
-  ]
-}
-}
+// code snippet and fake response incase API fails 
+// const fakeResponse = {data:
+// {
+//   "response": "success",
+//   "results-for": "ironman",
+//   "results": [
+//     {
+//       "id": "732",
+//       "name": "Ironman",
+//       "powerstats": {
+//         "intelligence": "100",
+//         "strength": "85",
+//         "speed": "58",
+//         "durability": "85",
+//         "power": "100",
+//         "combat": "64"
+//       },
+//       "biography": {
+//         "full-name": "Tony Stark",
+//         "alter-egos": "No alter egos found.",
+//         "aliases": [
+//           "Iron Knight",
+//           "Hogan Potts",
+//           "Spare Parts Man",
+//           "Cobalt Man II",
+//           "Crimson Dynamo",
+//           "Ironman"
+//         ],
+//         "place-of-birth": "Long Island, New York",
+//         "first-appearance": "Tales of Suspence #39 (March, 1963)",
+//         "publisher": "Marvel Comics",
+//         "alignment": "good"
+//       },
+//       "appearance": {
+//         "gender": "Male",
+//         "race": "Human",
+//         "height": [
+//           "6'6",
+//           "198 cm"
+//         ],
+//         "weight": [
+//           "425 lb",
+//           "191 kg"
+//         ],
+//         "eye-color": "Blue",
+//         "hair-color": "Black"
+//       },
+//       "work": {
+//         "occupation": "Inventor, Industrialist; former United States Secretary of Defense",
+//         "base": "Seattle, Washington"
+//       },
+//       "connections": {
+//         "group-affiliation": "Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.",
+//         "relatives": "Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor)"
+//       },
+//       "image": {
+//         "url": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
+//       }
+//     }
+//   ]
+// }
+// }
 
 
 const cors = 'https://cors-anywhere.herokuapp.com/'
 
 async function getHeroId(id) {
-  // removeId()
+ removeId()
 
   const url = ( cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
   const headers = {
@@ -79,13 +80,14 @@ async function getHeroId(id) {
 
   try {
     const response = await axios.get(url, headers)
-    // const response = fakeResponse
-    // see local
+   
+    // View localStorage
     // const response = {
     //   data: {
     //     results: JSON.parse(localStorage.addTeam)
     //   }
     // }
+
     const search = response.data.results
     console.log(search)
 
@@ -234,7 +236,14 @@ async function getHeroId(id) {
         item.innerText = `${connections[key]}`
         connectionsUl2.append(item)
       }
+
+      connectionsDiv.append(connectionsH3)
+      connectionsDiv.append(connectionsUl)
+      connectionsDiv.append(connectionsUl2)
+      connectionsDiv.className = ('c-connections')
       
+      // Saving team to local storage, creating 'Add To team' button 
+      // & appending it all to connectionsDiv & heroCard
       function addTeam() {
         console.log(localStorage)
         if (localStorage.addTeam) {
@@ -246,39 +255,31 @@ async function getHeroId(id) {
           localStorage.addTeam = JSON.stringify([item])
         }
       }
+
       const addTeambtn = document.createElement('button')
       addTeambtn.id = ('team-btn')
       addTeambtn.className = 'addteam-Btn'
       addTeambtn.addEventListener('click', addTeam)
-      addTeambtn.innerText = "Add to Team"
+      addTeambtn.innerText = "Add To Team"
       
-      // window.localStorage.addTeam
-
-      // localStorage.addTeam([item],'team.html') 
-      // window.location = localStorage.addTeam
-
-      // document.getElementById('team-btn').addEventListener('click', function () {
-      //   window.location.assign('team.html')
-      // })
-
-      connectionsDiv.append(connectionsH3)
-      connectionsDiv.append(connectionsUl)
-      connectionsDiv.append(connectionsUl2)
-      connectionsDiv.className = ('c-connections')
       connectionsDiv.append(addTeambtn)
       heroCard.append(connectionsDiv)
+      
 
     });
   } catch (error) {
     console.log(error);
   }
 }
+
+// Search Hero or Villain by name in search bar
 const button = document.querySelector('#search')
 button.addEventListener('click', () => {
   let input = document.querySelector('#input-name').value   
   getHeroId(input)
 })
 
+// Remove Hero or Villain after new search
 function removeId() {
   const removeId = document.querySelector('.hero-id')
   while (removeId.lastChild) {

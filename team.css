@@ -1,25 +1,28 @@
 body {
   text-align: center;
   background-image: url('https://i.imgur.com/4lbhbKO.jpg');
-  display: flex;
+  display: grid;
   justify-content: center;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  
 } 
 
-.wrapper nav {
+ 
+nav {
   writing-mode: horizontal-tb;
   overflow: hidden;
   background-color: black;
   outline:none;
   border-color: #FFFF00;
   box-shadow:0 0 10px #FFFF00;
+  display: grid;
+  justify-content: stretch;
+  max-width: 100vmax;
 }
 
-.wrapper ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0.5em;
@@ -27,13 +30,15 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.wrapper a {
+ nav a {
   float: right;
   display: block;
   color: white;
   text-align: center;
-  /* padding: 1px 1px; */
+  padding: 1px 1px; 
   text-decoration: none; 
+  display: flex;
+  justify-content: space-between;
 }
 
 ul {
@@ -47,15 +52,18 @@ ol {
 }
 
 .hero-id {
+  margin: 10px 10% 0px 10%;
   display: grid;
   justify-content: center;
-  margin: 10px 10% 0px 10%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
-  gap: 0px 0px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 30px 30px;
   grid-template-areas:
-    "."
-    ".";
+      ". . . "
+      ". . . "
+      ". . . "
+      ". . . "
+      ". . . ";
   max-width: 700px;
   color: white;
 }
@@ -70,8 +78,11 @@ ol {
   border-left: 8px solid  #FFFF00; 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  border-bottom: 8px solid  #FFFF00;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   outline:none;
   border-color:#FFFF00;
   box-shadow: 20px 20px 10px #FFFF00;
@@ -94,29 +105,6 @@ ol {
   box-shadow:0 0 4px #FFFF00;
 }
 
-.c-btnDiv {
-  grid-row-start: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color:black;
-  text-transform: capitalize;
-  border-right: 8px solid  #FFFF00;
-  border-left: 8px solid  #FFFF00;
-  border-bottom: 8px solid  #FFFF00;
-  position: relative;
-  padding: 0px 20px 0px 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-color:#FFFF00;
-  box-shadow: 20px 20px 10px #FFFF00;
-  box-shadow: 10px 10px 20px 10px #FFFF00;
-      -moz-box-shadow: 10px 10px 20px 10px #FFFF00;
-      -webkit-box-shadow: 10px 10px 20px 10px #FFFF00;
-      -khtml-box-shadow: 10px 10px 20px 10px #FFFF00;
-}
-
 h1 {
   font-size: 60px;
   color: black;
@@ -127,37 +115,45 @@ h1 {
 }
 
 h2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color:  #FFFF00;
 	font-size: 25px;
   font-family: 'Playfair Display', serif;
 }
 
-.addteam-Btn {
+.removeteam-Btn {
   height: 33px;
+  width: 150px;
   text-transform: uppercase;
-  border: 1px solid black;
-  background-color: #FFFF00;
-  /* border-radius: 1%; */
-  margin-left: 15px;
+  border: 5px solid black;
+  background-color: #ea060b;
+  margin-left: 30px;
   border-radius: 10px; 
+  border-color:black;
+  box-shadow:0 0 4px #FFFF00;
 }
 
-.addteam-Btn:focus {
+#remove-btn {
+  color: white
+}
+
+.removeteam-Btn:focus {
   outline:none;
-  border-color:#FFFF00;
-  box-shadow:0 0 10px #FFFF00;
+  border-color:#ea060b;
+  box-shadow:0 0 10px #ea060b;
 }
 
 .know-Btn {
   height: 33px;
+  width: 150px;
   text-transform: uppercase;
-  border: 1px solid black;
+  border: 5px solid black;
   background-color: #FFFF00;
-  /* border-radius: 1%; */
-  margin-left: 15px;
+  margin-left: 30px;
   border-radius: 10px;
+  border-color:black;
+  box-shadow:0 0 4px #FFFF00;
 }
 
 .know-Btn:focus {

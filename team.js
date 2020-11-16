@@ -19,34 +19,32 @@ team.forEach((item) => {
   const hvName = item.name
   heroName.textContent = `${hvName}`
   heroName.className = ('c-hvName')
-
+  heroName.id = ('heroName-id')
 
   cImgDiv.append(heroName)
   cImgDiv.append(img)
-  heroCard.append(cImgDiv)
 
-
-  // Get To Know Me & Remove Buttons
-  const btnDiv = document.createElement('div')
-  btnDiv.id = ('btnDiv-id')
-  btnDiv.className = ('c-btnDiv')
-
-  function addTeam() {
+  // Get To Know Me & Remove Buttons - appended to cImgDiv
+  function removeTeam() {
     console.log(localStorage)
     if (localStorage.addTeam) {
       let teamArr = JSON.parse(localStorage.addTeam)
       console.log(teamArr)
-      teamArr.push(item)
+      teamArr = teamArr.filter((member) => {return member.id != item.id})
       localStorage.addTeam = JSON.stringify(teamArr)
     } else {
       localStorage.addTeam = JSON.stringify([item])
     }
   }
-  const addTeambtn = document.createElement('button')
-  addTeambtn.id = ('team-btn')
-  addTeambtn.className = 'addteam-Btn'
-  addTeambtn.addEventListener('click', addTeam)
-  addTeambtn.innerText = "Add to Team"
+
+
+  // const removeTeam = teamArr.filter()
+
+  const removeTeambtn = document.createElement('button')
+  removeTeambtn.id = ('remove-btn')
+  removeTeambtn.className = 'removeteam-Btn'
+  removeTeambtn.addEventListener('click', removeTeam)
+  removeTeambtn.innerText = "Remove"
 
   const knowbtn = document.createElement('button')
   knowbtn.id = ('knowBtn-id')
@@ -54,8 +52,8 @@ team.forEach((item) => {
   knowbtn.addEventListener('click', heroCard)
   knowbtn.innerText = "Get To Know Me"
 
-  
-  btnDiv.append(knowbtn)
-  btnDiv.append(addTeambtn)
-  heroCard.append(btnDiv)
+  cImgDiv.append(knowbtn)
+  cImgDiv.append(removeTeambtn)
+  heroCard.append(cImgDiv)
+
 });

@@ -109,6 +109,7 @@ async function getHeroId(id) {
       const hvName = item.name
       heroName.textContent = `${hvName}`
       heroName.className = ('c-hvName')
+      heroName.id = ('heroName-id')
 
       cImgDiv.append(heroName)
       cImgDiv.append(img)

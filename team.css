@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Playfair Display', serif;
 } 
 
 #nav {
@@ -257,6 +258,7 @@ h2 {
   .removeteam-Btn {
     margin-left: 45px;
     margin-right: 30px;
+    margin-bottom: 10px;
   }
   
   .know-Btn {
@@ -266,13 +268,12 @@ h2 {
 
   #appearance-id {
     position: absolute;
-    margin: 10px 40% 0px 25%;
+    margin: 10px 25% 0px 25%;
     color: #FFFF00;
  }
   .c-appearance ul {
-    padding-top: 30px;
     text-align: center;
-    margin: 5px 15% 20px 20%;
+    margin: 10px 15% 20px 20%;
     display: grid;
     justify-content: center;
   }
@@ -282,9 +283,8 @@ h2 {
     color: #FFFF00;
   }  
   .c-biography ul {
-    padding-top: 30px;
     text-align: center;
-    margin: 5px 5% 20px 5%;
+    margin: 10px 5% 20px 5%;
     text-emphasis-position: center;
    }
    #powerstats-id {
@@ -293,10 +293,9 @@ h2 {
     color:#FFFF00;
   }
    .c-powerstats ul {
-    padding-top: 30px;
     text-align: center;
     color:white;
-    margin: 5px 25% 20px 30%;
+    margin: 10px 25% 20px 30%;
    }
    #work-id {
     position: absolute;
@@ -304,10 +303,9 @@ h2 {
     color: #FFFF00;
   }
    .c-work ul {
-    padding-top: 30px;
     text-align: center;
     color:white;
-    margin: 5px 20% 20px 25%;
+    margin: 10px 20% 20px 25%;
    }
    #connections-id {
     position: absolute;
@@ -315,9 +313,8 @@ h2 {
     color: #FFFF00;
   }
    .c-connections ul {
-    padding-top: 30px;
     text-align: center;
-    margin: 5px 10% 20px 10%;
+    margin: 10px 10% 20px 10%;
    }
 }
 

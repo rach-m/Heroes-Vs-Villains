@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Playfair Display', serif;
 } 
 
 
@@ -335,7 +336,6 @@ h2 {
   margin-bottom: 30px;
   color:  #FFFF00;
 	font-size: 25px;
-  font-family: 'Playfair Display', serif;
 }
 
   #input-name {
@@ -390,12 +390,34 @@ box-shadow:0 0 10px #FFFF00;
     font-size: 36px;
     text-align: center;
     }
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
   .search-bar {
     width: 90vw;
+    height: 150px;
   } 
   #input-name {
-    width: 90%;
+    width: 60%;
   } 
+
+  button {
+    height: 33px;
+    margin-left: 10px;
+    min-width: 56px;
+  }
+
+  .hero-id {
+    margin: 10px 10% 20% 10%;
+    max-width: 90vw;
+    color: white;
+  }
+
+  .addteam-Btn {
+    margin-right: 3%;
+    margin-left: 60%; 
+  }
   #appearance-id {
     position: absolute;
     top: 15px;

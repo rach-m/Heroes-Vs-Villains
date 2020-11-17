@@ -111,9 +111,9 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
 |---|---| ---|
 |Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Nov 10| Project Approval & HTML & CSS Basic Structure| Complete
-|Nov 12| JavaScript Functionality | Incomplete
+|Nov 12| JavaScript Functionality | Complete
 |Nov 13| MVP | Complete
-|Nov 16| PostMVP | Incomplete
+|Nov 16| PostMVP | Complete
 |Nov 17| Presentations | Incomplete
 
 ## Priority Matrix

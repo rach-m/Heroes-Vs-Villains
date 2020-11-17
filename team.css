@@ -1,8 +1,6 @@
 body {
   text-align: center;
   background-image: url('https://i.imgur.com/4lbhbKO.jpg');
-  /* display: grid;
-  justify-content: center; */
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -29,7 +27,6 @@ body {
 
 #nav li {
   margin: 0px;
-  display:
 }
 
 #nav li a {
@@ -43,7 +40,6 @@ body {
 
 #nav li a:hover {
   color: #FFFF00;
-  /* background-color: #35af3b; */
 }
 
 main {
@@ -176,7 +172,7 @@ h2 {
   box-shadow:0 0 10px #FFFF00;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   h1 {
   font-size: 36px;
   text-align: center;

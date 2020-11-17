@@ -27,7 +27,6 @@ body {
 
 #nav li {
   margin: 0px;
-  display:
 }
 
 #nav li a {
@@ -41,31 +40,32 @@ body {
 
 #nav li a:hover {
   color: #FFFF00;
-  /* background-color: #35af3b; */
 }
 
 main {
-  display: flex;
+  display: grid;
   justify-content: center; 
-  margin-top: 0px;
  }
 
 ul {
   list-style-type: none;
   padding: 0px;
+  text-align: center;
 }
 
-ol {
+/* ol {
   list-style-type: none;
   padding: 0px;
-}
+} */
 
 .hero-id {
-  display: flex;
+  display:flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   margin: 10px 10% 20% 10%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas:
     "."
@@ -75,7 +75,7 @@ ol {
     "."
     "."
     ".";
-  max-width: 720px;
+  max-width: 700px;
   color: white;
 }
 
@@ -142,12 +142,13 @@ ol {
 
 .c-appearance ul {
   padding-top: 40px;
-  text-align: left;
+  text-align: center;
+  margin: 5px 40% 10px 35%;
 }
-.c-appearance ol {
+/* .c-appearance ol {
   padding-top: 40px;
   text-align: right;
-}
+} */
 
 .c-biography{
   grid-row-start: 3;
@@ -178,13 +179,14 @@ ol {
 
 .c-biography ul {
  padding-top: 40px;
- text-align: left;
+ text-align: center;
+ margin: 5px 40% 10px 36%;
 }
-
+/* 
 .c-biography ol {
   padding-top: 40px;
   text-align: right;
-}
+} */
 
 .c-powerstats {
   grid-row-start: 4;
@@ -215,12 +217,16 @@ ol {
 
 .c-powerstats ul {
  padding-top: 40px;
+ text-align: center;
+ color:#FFFF00;
+ margin: 5px 40% 40px 36%;
 }
 
-.c-powerstats ol {
+
+/* .c-powerstats ol {
  padding-top: 40px;
  text-align: right;
-}
+} */
 
 .c-work {
   grid-row-start: 5;
@@ -250,13 +256,13 @@ ol {
 }
 
 .c-work ul {
- padding-top: 40px;
+ padding-top: 30px;
 }
 
-.c-work ol {
+/* .c-work ol {
  padding-top: 40px;
  text-align: right;
-}
+} */
 
 .c-connections {
   grid-row-start: 6;
@@ -286,32 +292,34 @@ ol {
 #connections-id {
   position: absolute;
   top: 10px;
-  margin: 5px 40% 0px 36%;
+  margin: 5px 40% 0px 41%;
   color: #FFFF00;
 }
 
 .c-connections ul {
- padding-top: 40px;
- text-align: left;
- margin-left: 5%;
+ padding-top: 30px;
+ text-align: center;
+ margin: 5px 5px 0px 25%;
 }
 
-.c-connections ol {
+/* .c-connections ol {
   padding-top: 40px;
   text-align: right;
   margin-left: 10%;
-  /* margin-bottom: 30%; */
-}
+  margin-bottom: 30%;
+} */
 
 .addteam-Btn {
   height: 33px;
+  width: auto;
   align-self: end;
   text-transform: uppercase;
   border: 1px solid black;
   background-color: #FFFF00;
   border-radius: 1%;
-  /* margin-top: 50%;
-  margin-right: 50%; */
+  margin-top: 30%;
+  margin-right: 10%; 
+  margin-bottom: 3%;
   border-radius: 10px;
 }
 
@@ -382,10 +390,6 @@ box-shadow:0 0 10px #FFFF00;
   text-align: center;
   color: white;
 }
-
-
-
-
 
 @media screen and (max-width: 500px) {
   h1 {

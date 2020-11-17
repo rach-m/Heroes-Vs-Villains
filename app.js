@@ -90,6 +90,7 @@ async function getHeroId(id) {
     //     results: JSON.parse(localStorage.addTeam)
     //   }
     // }
+
     console.log(response)
 
     if (!response.data.error) {
@@ -131,18 +132,18 @@ async function getHeroId(id) {
         const appearanceUl = document.createElement('ul')
         for (let key in appearance) {
           const item = document.createElement('li')
-          item.innerText = `${key}:`
+          item.innerText = `${key}: ${appearance[key]}`
           appearanceUl.append(item)
         }
-        const appearanceUl2 = document.createElement('ol')
-        for (let key in appearance) {
-          const item = document.createElement('li')
-          item.innerText = `${appearance[key]}`
-          appearanceUl2.append(item)
-        }
+        // const appearanceUl2 = document.createElement('ol')
+        // for (let key in appearance) {
+        //   const item = document.createElement('li')
+        //   item.innerText = `${appearance[key]}`
+        //   appearanceUl2.append(item)
+        // }
         appearanceDiv.append(appearanceH3)
         appearanceDiv.append(appearanceUl)
-        appearanceDiv.append(appearanceUl2)
+        // appearanceDiv.append(appearanceUl2)
         appearanceDiv.className = ('c-appearance')
         heroCard.append(appearanceDiv)
 
@@ -156,18 +157,18 @@ async function getHeroId(id) {
         const biographyUl = document.createElement('ul')
         for (let key in biography) {
           const item = document.createElement('li')
-          item.innerText = `${key}:`
+          item.innerText = `${key}: ${biography[key]}`
           biographyUl.append(item)
         }
-        const biographyUl2 = document.createElement('ol')
-        for (let key in biography) {
-          const item = document.createElement('li')
-          item.innerText = `${biography[key]}`
-          biographyUl2.append(item)
-        }
+        // const biographyUl2 = document.createElement('ol')
+        // for (let key in biography) {
+        //   const item = document.createElement('li')
+        //   item.innerText = `${biography[key]}`
+        //   biographyUl2.append(item)
+        // }
         biographyDiv.append(biographyH3)
         biographyDiv.append(biographyUl)
-        biographyDiv.append(biographyUl2)
+        // biographyDiv.append(biographyUl2)
         biographyDiv.className = ('c-biography')
         heroCard.append(biographyDiv)
 
@@ -182,18 +183,18 @@ async function getHeroId(id) {
         const powerstatsUl = document.createElement('ul')
         for (let key in powerstats) {
           const item = document.createElement('li')
-          item.innerText = `${key}:`
+          item.innerText = `${key}: ${powerstats[key]}`
           powerstatsUl.append(item)
         }
-        const powerstatsUl2 = document.createElement('ol')
-        for (let key in powerstats) {
-          const item = document.createElement('li')
-          item.innerText = `${powerstats[key]}`
-          powerstatsUl2.append(item)
-        }
+        // const powerstatsUl2 = document.createElement('ol')
+        // for (let key in powerstats) {
+        //   const item = document.createElement('li')
+        //   item.innerText = `${powerstats[key]}`
+        //   powerstatsUl2.append(item)
+        // }
         powerstatsDiv.append(powerstatsH3)
         powerstatsDiv.append(powerstatsUl)
-        powerstatsDiv.append(powerstatsUl2)
+        // powerstatsDiv.append(powerstatsUl2)
         powerstatsDiv.className = ('c-powerstats')
         heroCard.append(powerstatsDiv)
 
@@ -207,18 +208,18 @@ async function getHeroId(id) {
         const workUl = document.createElement('ul')
         for (let key in work) {
           const item = document.createElement('li')
-          item.innerText = `${key}:`
+          item.innerText = `${key}: ${work[key]}`
           workUl.append(item)
         }
-        const workUl2 = document.createElement('ol')
-        for (let key in work) {
-          const item = document.createElement('li')
-          item.innerText = `${work[key]}`
-          workUl2.append(item)
-        }
+        // const workUl2 = document.createElement('ol')
+        // for (let key in work) {
+        //   const item = document.createElement('li')
+        //   item.innerText = `${work[key]}`
+        //   workUl2.append(item)
+        // }
         workDiv.append(workH3)
         workDiv.append(workUl)
-        workDiv.append(workUl2)
+        // workDiv.append(workUl2)
         workDiv.className = ('c-work')
         heroCard.append(workDiv)
 
@@ -233,19 +234,19 @@ async function getHeroId(id) {
         const connectionsUl = document.createElement('ul')
         for (let key in connections) {
           const item = document.createElement('li')
-          item.innerText = `${key}:`
+          item.innerText = `${key}: ${connections[key]}`
           connectionsUl.append(item)
         }
-        const connectionsUl2 = document.createElement('ol')
-        for (let key in connections) {
-          const item = document.createElement('li')
-          item.innerText = `${connections[key]}`
-          connectionsUl2.append(item)
-        }
+        // const connectionsUl2 = document.createElement('ol')
+        // for (let key in connections) {
+        //   const item = document.createElement('li')
+        //   item.innerText = `${connections[key]}`
+        //   connectionsUl2.append(item)
+        // }
 
         connectionsDiv.append(connectionsH3)
         connectionsDiv.append(connectionsUl)
-        connectionsDiv.append(connectionsUl2)
+        // connectionsDiv.append(connectionsUl2)
         connectionsDiv.className = ('c-connections')
       
         // Saving team to local storage, creating 'Add To team' button 

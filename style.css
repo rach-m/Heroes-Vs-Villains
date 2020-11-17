@@ -135,20 +135,18 @@ ul {
 }
 #appearance-id {
    position: absolute;
-   top: 10px;
-   margin: 5px 40% 0px 35%;
+   top: 15px;
+   margin: 10px 40% 0px 36%;
    color: #FFFF00;
 }
 
 .c-appearance ul {
-  padding-top: 40px;
+  padding-top: 30px;
   text-align: center;
-  margin: 5px 40% 10px 35%;
+  margin: 5px 30% 20px 35%;
+  display: grid;
+  justify-content: center;
 }
-/* .c-appearance ol {
-  padding-top: 40px;
-  text-align: right;
-} */
 
 .c-biography{
   grid-row-start: 3;
@@ -172,21 +170,17 @@ ul {
 
 #biography-id {
   position: absolute;
-  top: 10px;
-  margin: 5px 40% 0px 36%;
+  top: 15px;
+  margin: 5px 40% 0px 38%;
   color: #FFFF00;
 }
 
 .c-biography ul {
- padding-top: 40px;
+ padding-top: 30px;
  text-align: center;
- margin: 5px 40% 10px 36%;
+ margin: 5px 10% 20px 15%;
+ text-emphasis-position: center;
 }
-/* 
-.c-biography ol {
-  padding-top: 40px;
-  text-align: right;
-} */
 
 .c-powerstats {
   grid-row-start: 4;
@@ -210,23 +204,18 @@ ul {
 
 #powerstats-id {
   position: absolute;
-  top: 10px;
-  margin: 5px 40% 0px 36%;
+  top: 15px;
+  margin: 5px 30% 0px 38%;
   color:#FFFF00;
 }
 
 .c-powerstats ul {
- padding-top: 40px;
+ padding-top: 30px;
  text-align: center;
- color:#FFFF00;
- margin: 5px 40% 40px 36%;
+ color:white;
+ margin: 5px 30% 20px 40%;
 }
 
-
-/* .c-powerstats ol {
- padding-top: 40px;
- text-align: right;
-} */
 
 .c-work {
   grid-row-start: 5;
@@ -250,34 +239,67 @@ ul {
 
 #work-id {
   position: absolute;
-  top: 10px;
-  margin: 5px 40% 0px 40%;
+  top: 15px;
+  margin: 5px 30% 0px 41%;
   color: #FFFF00;
 }
 
 .c-work ul {
  padding-top: 30px;
+ text-align: center;
+ color:white;
+ margin: 5px 20% 20px 20%;
 }
-
-/* .c-work ol {
- padding-top: 40px;
- text-align: right;
-} */
 
 .c-connections {
   grid-row-start: 6;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   background-color:black;
   text-transform: capitalize;
   border-right: 8px solid  #FFFF00;
   border-left: 8px solid  #FFFF00;
   position: relative;
   padding: 30px 0px 10px;
+  /* border-bottom: 8px solid  #FFFF00; */
+  position: relative;
+  /* border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  border-color:#FFFF00;
+  box-shadow: 20px 20px 10px #FFFF00;
+  box-shadow: 10px 10px 20px 10px #FFFF00;
+      -moz-box-shadow: 10px 10px 20px 10px #FFFF00;
+      -webkit-box-shadow: 10px 10px 20px 10px #FFFF00;
+      -khtml-box-shadow: 10px 10px 20px 10px #FFFF00;
+  /* margin-bottom: 10%; */
+}
+
+#connections-id {
+  position: absolute;
+  top: 15px;
+  margin: 5px 40% 0px 41%;
+  color: #FFFF00;
+}
+
+.c-connections ul {
+ padding-top: 30px;
+ text-align: center;
+ margin: 5px 20% 20px 25%;
+}
+
+.c-addteamDiv {
+  grid-row-start: 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+  text-transform: capitalize;
+  border-right: 8px solid  #FFFF00;
+  border-left: 8px solid  #FFFF00;
   border-bottom: 8px solid  #FFFF00;
   position: relative;
+  margin-bottom: 10%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-color:#FFFF00;
@@ -286,28 +308,7 @@ ul {
       -moz-box-shadow: 10px 10px 20px 10px #FFFF00;
       -webkit-box-shadow: 10px 10px 20px 10px #FFFF00;
       -khtml-box-shadow: 10px 10px 20px 10px #FFFF00;
-  margin-bottom: 10%;
 }
-
-#connections-id {
-  position: absolute;
-  top: 10px;
-  margin: 5px 40% 0px 41%;
-  color: #FFFF00;
-}
-
-.c-connections ul {
- padding-top: 30px;
- text-align: center;
- margin: 5px 5px 0px 25%;
-}
-
-/* .c-connections ol {
-  padding-top: 40px;
-  text-align: right;
-  margin-left: 10%;
-  margin-bottom: 30%;
-} */
 
 .addteam-Btn {
   height: 33px;
@@ -317,9 +318,9 @@ ul {
   border: 1px solid black;
   background-color: #FFFF00;
   border-radius: 1%;
-  margin-top: 30%;
-  margin-right: 10%; 
-  margin-bottom: 3%;
+  margin-top: 5%;
+  margin-left: 75%; 
+  margin-bottom: 5%;
   border-radius: 10px;
 }
 
@@ -402,5 +403,65 @@ box-shadow:0 0 10px #FFFF00;
   #input-name {
     width: 90%;
   } 
+  #appearance-id {
+    position: absolute;
+    top: 15px;
+    margin: 10px 40% 0px 25%;
+    color: #FFFF00;
+ }
+  .c-appearance ul {
+    padding-top: 30px;
+    text-align: center;
+    margin: 5px 15% 20px 20%;
+    display: grid;
+    justify-content: center;
+  }
+  #biography-id {
+    position: absolute;
+    top: 15px;
+    margin: 5px 25% 0px 28%;
+    color: #FFFF00;
+  }  
+  .c-biography ul {
+    padding-top: 30px;
+    text-align: center;
+    margin: 5px 5% 20px 5%;
+    text-emphasis-position: center;
+   }
+   #powerstats-id {
+    position: absolute;
+    top: 15px;
+    margin: 5px 25% 0px 27%;
+    color:#FFFF00;
+  }
+   .c-powerstats ul {
+    padding-top: 30px;
+    text-align: center;
+    color:white;
+    margin: 5px 25% 20px 30%;
+   }
+   #work-id {
+    position: absolute;
+    top: 15px;
+    margin: 5px 30% 0px 33%;
+    color: #FFFF00;
+  }
+   .c-work ul {
+    padding-top: 30px;
+    text-align: center;
+    color:white;
+    margin: 5px 20% 20px 25%;
+   }
+   #connections-id {
+    position: absolute;
+    top: 15px;
+    margin: 5px 30% 0px 35%;
+    color: #FFFF00;
+  }
+   .c-connections ul {
+    padding-top: 30px;
+    text-align: center;
+    margin: 5px 10% 20px 10%;
+   }
 }
 

@@ -1,8 +1,12 @@
+//setting Url & Headers
 const cors = 'https://cors-anywhere.herokuapp.com/'
 
 async function getHeroId(id) {
+
+  // remove search
   removeId()
   
+  // Loading animation in search button to let users know their search is being processed
   button.innerHTML = "<img src = 'loading.svg'>"
 
   const url = ( cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
@@ -25,6 +29,7 @@ async function getHeroId(id) {
 
     console.log(response)
 
+    // If there is an error and no hero or vilain name is found display a message - the rest of this code is right after the last try curly bracket
     if (!response.data.error) {
       const search = response.data.results
       console.log(search)

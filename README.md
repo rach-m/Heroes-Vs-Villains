@@ -88,8 +88,8 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
 - Use Axios to make a request to the Superhero API and insert some of the retrieved data on to the DOM.
 - Get basic HTML & CSS down
 - Create a text input and button for searching the Superhero API by hero or villain name
-- Style using Flexbox
-- Implement responsive design using a media query for desktops and mobile devices
+- Style using Flexbox & Grid
+- Implement responsive design using a media query for mobile devices
 - JavaScript Functionality:
   - Attach an event listener that logs the text value of the input
   - Make search return information about heroes and villains' powerstats, 
@@ -97,13 +97,14 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
   - Create button that allow user to choose favorite heroes or villains and build a team 
   
 
-#### PostMVP  
-- Create function to randomly choose heroes and villains 
+#### PostMVP / Future Development 
+- Use local storage to save user's team 
+- Create "Get To Know Me" button that shows favorite heroe or villain information
+- Create remove button to remove favorite heroes or villains from team
+- Advanced CSS for search button/loading animation
+- Create function to randomly choose heroes and villains
 - Create a button and function to compare powerstats of heroes and villains
-- Use local storage to save user's team
 - Add animations of heroes and villains
-- Add an alert box to let users known when they've added or removed a hero or villain from their team
-- Add some advanced CSS
 
 ## Project Schedule
 
@@ -114,7 +115,7 @@ url: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
 |Nov 12| JavaScript Functionality | Complete
 |Nov 13| MVP | Complete
 |Nov 16| PostMVP | Complete
-|Nov 17| Presentations | Incomplete
+|Nov 17| Presentations | Complete
 
 ## Priority Matrix
 
@@ -124,27 +125,59 @@ Priority Matrix Image Link: https://i.imgur.com/VyhW3Ew.jpg
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML | L | 3hrs| --- | --- |
-| Axios call and API search| H | 3hrs| --- | --- |
-| CSS | L | 3hrs| --- | --- |
-| Create a text input and button & attach an event listener| H | 3hrs| --- | --- |
-| Make search return information about heroes and villains| H | 3hrs| --- | --- |
-| Create button that allow user to choose favorite heroes or villains | H | 3hrs| --- | --- |
-| JavaScript random & compare functions| M | 3hrs| --- | --- |
-| Complete MVP| H | 3hrs| --- | --- |
-| Responsive Design| H | 3hrs| --- | --- |
-| Alert box | L | 3hrs| --- | --- |
-| Local storage| L | 3hrs| --- | --- |
-| Advanced CSS | L | 3hrs| --- | --- |
-| Add animations of heroes and villains| L | 3hrs| --- | --- |
-|Complete PostMVP | L | 3hrs| --- | --- |
-| Total | H | 42hrs| --- | --- |
+| HTML | L | 3hrs| 1hr | 1hr |
+| Axios call and API search| H | 3hrs| 6hrs | 6hrs |
+| CSS | L | 3hrs| 6hrs | 6hrs |
+| Style with flexbox & grid | L | 3hrs| 4hrs | 4hrs |
+| Create a text input and button & attach an event listener| H | 3hrs| 1hr | 1hr |
+| Make search return information about heroes and villains| H | 3hrs| 4hrs | 4hrs |
+| Create button that allow user to choose favorite heroes or villains | H | 3hrs| 4hrs | 4hrs |
+| Responsive Design| H | 3hrs| 3hrs | 3hrs |
+| Local storage| L | 3hrs| 4hrs | 4hrs |
+| Create remove button to remove favorite heroes or villains from team | H | 3hrs| 4hrs | 4hrs |
+| Create "Get To Know Me" button that shows favorite heroe or villain information | H | 3hrs| 3hrs | 3hrs |
+| Advanced CSS for search button/loading animation | L | 3hrs| 3hrs | 3hrs |
+| Total | H | 42hrs| 43hrs | 43hrs |
 
 
 ## Code Snippet
 
-To be completed later.
+The following is a code snippet of the code I'm most proud of which is the saving team to local storage and creating an "Add To Team" button. This allows users to build a team of  their favorite characters and save it to local storage and be able to view their team in the team.html page.
+
+```json
+// Saving team to local storage, creating 'Add To team' button 
+// & appending it all to addTeamDiv & heroCard
+function addTeam() {
+  console.log(localStorage)
+  if (localStorage.addTeam) {
+  let teamArr = JSON.parse(localStorage.addTeam)
+  console.log(teamArr)
+  teamArr.push(item)
+  localStorage.addTeam = JSON.stringify(teamArr)
+  } else {
+    ocalStorage.addTeam = JSON.stringify([item])
+    }
+ }
+
+  const addTeambtn = document.createElement('button')
+  addTeambtn.id = ('team-btn')
+  addTeambtn.className = 'addteam-Btn'
+  addTeambtn.addEventListener('click', addTeam)
+  addTeambtn.innerText = "Add To Team"
+        
+        
+  const addteamDiv = document.createElement('div')
+  addteamDiv.className = ('c-addteamDiv')
+
+  addteamDiv.append(addTeambtn)
+  heroCard.append(addteamDiv)
+```
 
 ## Change Log
 
-To be completed later.
+After finishing MVP I added these features to PostMVP to give users more options.
+- Create "Get To Know Me" button that shows favorite heroe or villain information
+- Create remove button to remove favorite heroes or villains from team
+
+I added this feature to PostMVP to let users know that their search is being processed.
+- Advanced CSS for search button/loading animation

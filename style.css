@@ -7,6 +7,7 @@ body {
   background-size: cover;
 } 
 
+
 #nav {
   list-style: none;
   font-weight: bold;
@@ -53,10 +54,6 @@ ul {
   text-align: center;
 }
 
-/* ol {
-  list-style-type: none;
-  padding: 0px;
-} */
 
 .hero-id {
   display:flex;
@@ -261,17 +258,13 @@ ul {
   border-left: 8px solid  #FFFF00;
   position: relative;
   padding: 30px 0px 10px;
-  /* border-bottom: 8px solid  #FFFF00; */
   position: relative;
-  /* border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; */
   border-color:#FFFF00;
   box-shadow: 20px 20px 10px #FFFF00;
   box-shadow: 10px 10px 20px 10px #FFFF00;
       -moz-box-shadow: 10px 10px 20px 10px #FFFF00;
       -webkit-box-shadow: 10px 10px 20px 10px #FFFF00;
       -khtml-box-shadow: 10px 10px 20px 10px #FFFF00;
-  /* margin-bottom: 10%; */
 }
 
 #connections-id {

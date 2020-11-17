@@ -69,7 +69,9 @@
 const cors = 'https://cors-anywhere.herokuapp.com/'
 
 async function getHeroId(id) {
- removeId()
+  removeId()
+  
+  button.innerHTML = "<img src = 'loading.svg'>"
 
   const url = ( cors + `https://www.superheroapi.com/api/1743621192472664/search/${id}`)
   const headers = {
@@ -80,7 +82,8 @@ async function getHeroId(id) {
 
   try {
     const response = await axios.get(url, headers)
-   
+    
+
     // View localStorage
     // const response = {
     //   data: {
@@ -92,7 +95,7 @@ async function getHeroId(id) {
     if (!response.data.error) {
       const search = response.data.results
       console.log(search)
-      
+     
       search.forEach((item) => {
 
    
@@ -277,6 +280,9 @@ async function getHeroId(id) {
   } catch (error) {
     console.log(error);
   }
+  button.innerHTML = "Search"
+  let searchBar = document.querySelector(".search-bar")
+  searchBar.style.marginTop = "0%"
 }
 
 // Search Hero or Villain by name in search bar

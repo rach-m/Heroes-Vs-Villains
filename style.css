@@ -1,47 +1,54 @@
 body {
   text-align: center;
   background-image: url('https://i.imgur.com/4lbhbKO.jpg');
-  display: flex;
-  justify-content: center;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  
 } 
 
-nav {
-  writing-mode: horizontal-tb;
-  overflow: hidden;
-  background-color: black;
-  outline:none;
-  border-color: #FFFF00;
-  box-shadow:0 0 10px #FFFF00;
-  display: grid;
-  justify-content: stretch;
-  max-width: 100vmax;
+#nav {
+  list-style: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background-color:black;
+  height:38px;
+  border: 2px solid  #FFFF00;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5em;
-  border: 3px solid #FFFF00;
-  display: flex;
-  justify-content: space-between;
+#nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  width: 100%;
 }
- nav a {
-  float: right;
-  display: block;
+
+#nav li {
+  margin: 0px;
+  display:
+}
+
+#nav li a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
   color: white;
-  text-align: center;
-  padding: 1px 1px; 
-  text-decoration: none; 
+  background-color: black;
+  float: right;
+}
+
+#nav li a:hover {
+  color: #FFFF00;
+  /* background-color: #35af3b; */
+}
+
+main {
   display: flex;
-  justify-content: space-between;
-}  
-  
-  
+  justify-content: center; 
+  margin-top: 0px;
+ }
 
 ul {
   list-style-type: none;
@@ -308,35 +315,16 @@ ol {
   border-radius: 10px;
 }
 
-/* .c-addteamDiv {
-  grid-row-start: 7;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color:black;
-  text-transform: capitalize;
-  border-right: 8px solid  #FFFF00;
-  border-left: 8px solid  #FFFF00;
-  border-bottom: 8px solid  #FFFF00;
-  position: relative;
-  padding: 30px 30px 30px 30px;
-  margin: 0px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-color:#FFFF00;
-  box-shadow: 20px 20px 10px #FFFF00;
-  box-shadow: 10px 10px 20px 10px #FFFF00;
-      -moz-box-shadow: 10px 10px 20px 10px #FFFF00;
-      -webkit-box-shadow: 10px 10px 20px 10px #FFFF00;
-      -khtml-box-shadow: 10px 10px 20px 10px #FFFF00;
-} */
+button img {
+  height: 15px;
+  min-width: 56px;
+}
 
 h1 {
   font-size: 60px;
   color: black;
   text-align: center;
-  margin-top: 80px; 
+  margin-top: 10%; 
   text-shadow: 1px 1px 2px  white, 0 0 25px  #FFFF00, 0 0 5px  #FFFF00;
 }
 
@@ -372,6 +360,7 @@ button {
   border-radius: 1%;
   margin-left: 15px;
   border-radius: 10px;
+  min-width: 56px;
 }
 
 button:focus {
@@ -388,7 +377,8 @@ box-shadow:0 0 10px #FFFF00;
   padding-bottom: 6px;
   border-radius: 10px;
   border: 3px solid  #FFFF00;
-  margin-top: 20%;
+  margin-top: 5%;
+  transition: all 2s;
   text-align: center;
   color: white;
 }
@@ -397,9 +387,16 @@ box-shadow:0 0 10px #FFFF00;
 
 
 
-@media screen and (max-width: 600px) {
-h1 {
-  font-size: 36px;
-  text-align: center;
-   }
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    }
+  .search-bar {
+    width: 90vw;
+  } 
+  #input-name {
+    width: 90%;
+  } 
 }
+

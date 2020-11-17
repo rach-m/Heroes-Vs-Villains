@@ -1,45 +1,55 @@
 body {
   text-align: center;
   background-image: url('https://i.imgur.com/4lbhbKO.jpg');
-  display: grid;
-  justify-content: center;
+  /* display: grid;
+  justify-content: center; */
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
- 
-nav {
-  writing-mode: horizontal-tb;
-  overflow: hidden;
-  background-color: black;
-  outline:none;
-  border-color: #FFFF00;
-  box-shadow:0 0 10px #FFFF00;
-  display: grid;
-  justify-content: stretch;
-  max-width: 100vmax;
+#nav {
+  list-style: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background-color:black;
+  height:38px;
+  border: 2px solid  #FFFF00;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5em;
-  border: 3px solid #FFFF00;
-  display: flex;
-  justify-content: space-between;
+#nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  width: 100%;
 }
- nav a {
-  float: right;
-  display: block;
+
+#nav li {
+  margin: 0px;
+  display:
+}
+
+#nav li a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
   color: white;
-  text-align: center;
-  padding: 1px 1px; 
-  text-decoration: none; 
-  display: flex;
-  justify-content: space-between;
+  background-color: black;
+  float: right;
 }
+
+#nav li a:hover {
+  color: #FFFF00;
+  /* background-color: #35af3b; */
+}
+
+main {
+  display: grid;
+  justify-content: center; 
+ }
 
 ul {
   list-style-type: none;
@@ -75,6 +85,7 @@ ol {
 .c-imgDiv{
   display: grid;
   justify-content: center;
+  align-self: start;
   background: black;
   border-top: 8px solid  #FFFF00;
   border-right: 8px solid #FFFF00;
@@ -166,9 +177,18 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-h1 {
+  h1 {
   font-size: 36px;
   text-align: center;
-   }
+  }
+   .hero-id {
+    grid-template-areas:
+        "."
+        "."
+        "."
+        "."
+        ".";
+    max-width: 90vw;
+  }
 }
 
